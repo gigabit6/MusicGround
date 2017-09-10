@@ -1,10 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {AuthModule} from './auth/auth.module';
 import {AppRoutingModule} from './app-routing.module';
+import {CoreModule} from './core/core.module';
+import {HttpWrapper} from './core/http/http.wrapper';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,12 @@ import {AppRoutingModule} from './app-routing.module';
     BrowserModule,
     AuthModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [HttpWrapper],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
