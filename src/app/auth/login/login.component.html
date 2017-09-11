@@ -1,7 +1,27 @@
-<form id="login-form">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" [(ngModel)]="data.username">
+<div class="container">
+  <h2>Login</h2>
+  <div class="panel">
+    <div class="panel-body">
+      <form id="login-form" (onSubmit)="login()">
+        <div class="row">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="data.username">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" class="form-control" id="password" name="password" [(ngModel)]="data.password">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <button>Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-  <label for="password">Password:</label>
-  <input type="text" id="password" name="password" [(ngModel)]="data.password">
-</form>

@@ -21,7 +21,7 @@ export class AuthenticationService extends BaseService<any, RequestOptions<any>>
   }
 
   login(options: RequestOptions<any>): Subscription {
-    return this.http.post(super.buildUrl(options, 'login'), options.data, 'basic', this.onSuccess(options), this.onError(options));
+    return this.http.post(super.buildUrl(options, '/login'), options.data, 'basic', this.onSuccess(options), this.onError(options));
   }
 
   register(options: RequestOptions<any>): Subscription {
